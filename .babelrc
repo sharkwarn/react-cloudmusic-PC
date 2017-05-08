@@ -1,0 +1,7 @@
+{
+  "plugins":[
+    "transform-export-extensions",
+    ["import", { "libraryName": "antd", "style": "css" }] 
+  ],
+  "presets":[ "es2015" , "react" , "stage-0"]
+}

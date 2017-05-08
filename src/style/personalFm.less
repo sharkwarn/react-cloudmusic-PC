@@ -1,0 +1,166 @@
+.personalFm{
+  width:100%;
+  height:auto;
+  box-sizing:border-box;
+  padding:30px 50px;
+  overflow: hidden;
+  .personalFm-song{
+    width:750px;
+    height:420px;
+    overflow:hidden;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    .personalFm-play{
+      width:320px;
+      height:320px;
+      img{
+        width:320px;
+        height:330px;
+        border:none;
+        outline:none;
+      }
+    }
+    .personalFm-lyric{
+      width:310px;
+      height:420px;
+      overflow:hidden;
+      .song-header{
+        width:100%;
+        height:60px;
+        .name{
+          height:30px;
+          line-height:30px;
+          font-size:25px;
+          color:#323232;
+        }
+        .detail{
+          height:30px;
+          line-height:30px;
+          font-size:12px;
+          color:#616569;
+          a{
+            color:#5178be;
+          }
+        }
+      }
+      .song-lyric{
+        height:360px;
+        width:100%;
+        overflow-x:hidden;
+        overflow-y:auto;
+        p{
+          height:20px;
+          font-size:14px;
+          color:#999595;
+          line-height:20px;
+          margin-bottom:20px;
+        }
+      }
+    }
+  }
+  .personalFm-evluate{
+    width:100%;
+    height:auto;
+    overflow-x:hidden;
+    overflow-y:auto;
+    box-sizing:border-box;
+    padding: 20px 0;
+    .personalFm-tit{
+      width:100%;
+      height:35px;
+      line-height:35px;
+      border-bottom:1px solid #e1e1e3;
+      margin-bottom:20px;
+      span{
+        font-size:20px;
+      }
+      em{
+        font-size:12px;
+      }
+    }
+    .personalFm-eva-input{
+      width:100%;
+      height:50px;
+      box-sizing: border-box;
+      padding:10px;
+      background:#f1f1f3;
+      & > div{
+        width:100%;
+        height:100%;
+        background:#fff;
+        font-size:20px;
+        line-height:30px;
+        color:#898989;
+        cursor: pointer;
+        span{
+          font-size:14px;
+        }
+      }
+    }
+    .personalFm-eva-list{
+      width:100%;
+      height:auto;
+      .comment-list{
+        width:100%;
+        height:auto;
+        border-bottom:1px solid #efefef;
+        box-sizing: border-box;
+        padding: 15px 0;
+        display:flex;
+        justify-content:space-between;
+        .comment-logo{
+          width:36px;
+          height:36px;
+          float:left;
+          img{
+            width:36px;
+            height:36px;
+            border-radius:36px;
+          }
+        }
+        .comment-content{
+          height:auto;
+          flex:1;
+          box-sizing: border-box;
+          padding: 0 10px;
+          .comment-text{
+            width:100%;
+            height:auto;
+            float:left;
+            line-height:20px;
+            color:#323232;
+            span{
+              color:#5b7aca;
+              cursor: pointer;
+              margin-right:5px;
+            }
+
+          }
+          .comment-date{
+            width:100%;
+            height:auto;
+            overflow:hidden;
+            display:flex;
+            justify-content:space-between;
+            span{
+              font-size:12px;
+              color:#999999;
+            }
+            em{
+              font-size:12px;
+              color:#999999;
+            }
+          }
+        }
+      }
+    }
+  }
+  .ant-modal-mask{
+    background:rgba(0,0,0,0)
+  }
+  .ant-modal{
+    top:30%;
+  }
+}

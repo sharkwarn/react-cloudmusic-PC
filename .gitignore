@@ -1,0 +1,10 @@
+node_modules
+npm-debug.log
+.idea/
+*.map
+.vscode/
+##########
+.gutignore
+server/
+.tags
+.tags1

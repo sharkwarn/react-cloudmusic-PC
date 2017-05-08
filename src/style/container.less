@@ -1,0 +1,223 @@
+.container{
+  width:100%;
+  height:100%;
+  box-sizing:border-box;
+  padding:50px 0;
+  display:flex;
+  .container-aside{
+    width:200px;
+    height:100%;
+    float:left;
+    background:#f5f5f7;
+    color:#79797b;
+    font-size:12px;
+    box-sizing: border-box;
+    border-right:1px solid #e2e2e4;
+    position:relative;
+    span{
+      display:block;
+      width:100%;
+      height:30px;
+      line-height:30px;
+      text-indent: 10px;
+    }
+    .list{
+      width:100%;
+      height:30px;
+      text-indent:25px;
+      line-height:30px;
+      color:#79797b;
+      &:hover{
+        a{
+          color:#07080a;
+        }
+      }
+      .active{
+        background:#e6e7eb;
+        position:relative;
+        a{
+          color:#07080a;
+        }
+        &:after{
+          content:'';
+          display:block;
+          width:3px;
+          height:30px;
+          background:#ad3d3c;
+          position:absolute;
+          left:0;
+          top:0;
+        }
+      }
+
+      a{
+        color:#79797b;
+        text-decoration: none;
+      }
+    }
+    .playmin{
+      width:100%;
+      height:60px;
+      box-sizing:border-box;
+      border-top:1px solid #e2e2e4;
+      position:absolute;
+      bottom:0;
+      .playmin-img{
+        width:60px;
+        height:60px;
+        float:left;
+        position:relative;
+        cursor:pointer;
+        img{
+          width:60px;
+          height:60px;
+          outline:none;
+          border:none;
+          display:block;
+        }
+        div{
+          width:60px;
+          height:60px;
+          font-size:30px;
+          line-height:60px;
+          text-align: center;
+          color:rgba(255,255,255,0.8);
+          position:absolute;
+          left:0;
+          top:0;
+          background:rgba(0,0,0,0.3);
+          display:none;
+          transition: 0.2s;
+        }
+        &:hover{
+          div{
+            display:block;
+          }
+        }
+      }
+      .playmin-detail{
+        width:110px;
+        height:60px;
+        float:left;
+        box-sizing: border-box;
+        padding: 10px;
+        div{
+          height:20px;
+          font-size:12px;
+          color:#363638;
+          line-height:20px;
+          display:block;
+          white-space:nowrap;
+          overflow:hidden;
+          text-overflow:ellipsis;
+        }
+      }
+      .playmin-operation{
+        width:15px;
+        float:left;
+        height:60px;
+        font-size:12px;
+        line-height: 20px;
+        box-sizing: border-box;
+        padding:10px;
+      }
+    }
+  }
+  .container-main{
+    width:100%;
+    height:100%;
+    float:left;
+    background:#fafafa;
+    flex:1;
+    box-sizing:border-box;
+    padding: 0 50px 5px 50px;
+    overflow:auto;
+    .container-list-tit{
+      height: 30px;
+      width:100%;
+      border-bottom:1px solid #e2e2e4;
+      span{
+        float:left;
+        font-size:18px;
+        color:#1f2420;
+      }
+      em{
+        float:right;
+        font-size:14px;
+        color:#1f2420;
+      }
+    }
+    .ant-tabs-nav-scroll{
+      display:flex;
+      justify-content: space-around;
+    }
+    .ant-tabs-nav .ant-tabs-tab-active ,.ant-tabs-nav .ant-tabs-tab:hover{
+      color:#b53834;
+    }
+    .ant-tabs-ink-bar{
+      background:#b53834;
+    }
+  }
+  .container-list-content{
+    width:780px;
+    height:430px;
+    padding:20px 0 30px 0;
+    margin:0 auto;
+    .container-list-content-box{
+      width:138px;
+      height:180px;
+      float:left;
+      margin-right:18px;
+      &>div{
+        width:138px;
+        height:138px;
+        box-sizing: border-box;
+        border:1px solid #e2e2e4;
+        position:relative;
+        overflow:hidden;
+        cursor: pointer;
+        img{
+          width:136px;
+          height:136px;
+          display:block;
+          float:left;
+        }
+        .icon-play{
+          position:absolute;
+          bottom:5px;
+          right:5px;
+          font-size:25px;
+          color:#fff;
+        }
+        .hidden-content{
+          width:100%;
+          height:50px;
+          line-height:16px;
+          font-size:12px;
+          color:#fff;
+          background:rgba(0,0,0,0.3);
+          position:absolute;
+          top:-50px;
+          left:0;
+          box-sizing: border-box;
+          padding: 5px;
+          transition: 0.3s;
+        }
+        &:hover{
+          .hidden-content{
+            top:0px;
+          }
+        }
+      }
+      p{
+        font-size:12px;
+        color:#323232;
+        line-height:16px;
+        float:left;
+        box-sizing: border-box;
+        padding: 5px 0;
+      }
+    }
+  }
+
+}
