@@ -27,8 +27,8 @@ class Container extends React.Component {
           <div className="container">
             <AsideList/>
             <div className="container-main">
-              <Route  exact={{false}} path="/Home" component={Home}/>
-              <Route path="/" component={PersonalFm}/>
+              <Route  exact={{false}} path="/" component={Home}/>
+              <Route path="/PersonalFm" component={PersonalFm}/>
               <Route path="/MV" component={MV}/>
               <Route path="/Friends" component={Friends}/>
               <Route path="/LoacalMusic" component={LoacalMusic}/>

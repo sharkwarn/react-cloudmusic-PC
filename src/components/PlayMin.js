@@ -1,5 +1,6 @@
 import React,{ Component } from 'react'
 import {Icon} from 'antd'
+import PropTypes from 'prop-types';
 import './../style/container.less'
 class PalyMin extends Component{
   static propTypes  = {

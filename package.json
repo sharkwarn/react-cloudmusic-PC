@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "antd": "^2.10.0",
     "antd-mobile": "^1.1.1",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
@@ -33,6 +34,7 @@
     "react-router-dom": "^4.0.0",
     "react-router-redux": "^4.0.8",
     "style-loader": "^0.17.0",
+    "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5",
     "whatwg-fetch": "^2.0.3"
   }

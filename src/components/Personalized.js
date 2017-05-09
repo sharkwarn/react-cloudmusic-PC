@@ -10,21 +10,21 @@ class Personalized extends Component{
     }
   }
   componentWillMount(){
-    fetch('http://music.163.com/api/song/detail/?id=28377211&ids=%5B28377211%5D',{
-      method:'post',
-      mode:'cors',
-      headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-      "Cookie":"appver=1.5.0.75771",
-      "Referer":"http://music.163.com/"
-    },
-    }).then(function(response) {
-      return response.json();
-    }).then(function(data) {
-      console.log(data);
-    }).catch(function(e) {
-      console.log("Oops, error");
-    });
+    // fetch('http://music.163.com/api/song/detail/?id=28377211&ids=%5B28377211%5D',{
+    //   method:'post',
+    //   mode:'cors',
+    //   headers: {
+    //   "Content-Type": "application/x-www-form-urlencoded",
+    //   "Cookie":"appver=1.5.0.75771",
+    //   "Referer":"http://music.163.com/"
+    // },
+    // }).then(function(response) {
+    //   return response.json();
+    // }).then(function(data) {
+    //   console.log(data);
+    // }).catch(function(e) {
+    //   console.log("Oops, error");
+    // });
   }
   render(){
     return(

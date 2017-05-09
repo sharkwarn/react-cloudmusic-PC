@@ -8,8 +8,8 @@ class AsideList extends Component {
     super(props)
     this.state = {
       list1 : [
-        ['aside-1','发现音乐',"/Home"],
-        ['aside-2','私人FM',"/"],
+        ['aside-1','发现音乐',"/"],
+        ['aside-2','私人FM',"/PersonalFm"],
         ['aside-3','MV',"/MV"],
         ['aside-4','朋友',"/Friends"],
       ],
@@ -40,8 +40,8 @@ class AsideList extends Component {
     )
     this.state.list1.forEach((value,i)=>{
       data.push(
-        <div key={value[0]} className="list">
-          <div  className={this.state.active == value[0] ? 'active' : ''} onClick={this.handleClick.bind(this,value[0])}><Link to={value[2]}>{value[1]}</Link></div>
+        <div key={value[0]} onClick={this.handleClick.bind(this,value[0])} className="list">
+          <div  className={this.state.active == value[0] ? 'active' : ''} ><Link to={value[2]}>{value[1]}</Link></div>
         </div>
       )
     })
