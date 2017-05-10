@@ -1,13 +1,58 @@
 import React, { Component } from 'react';
 import Personalized from  './../components/Personalized'
 import ListMobule from './../components/lists/ListMobule'
+import Recommend from './../components/Recommend'
+import Tops from './../components/tops/Tops'
 import { Button,Icon,Tabs } from 'antd';
 const TabPane = Tabs.TabPane;
+
 
 class Home extends Component {
   constructor(props){
     super(props)
     this.state = {
+      tops:[
+        {
+          name:'暧昧',
+          songer:'薛之谦',
+          pick:'new'
+        },
+        {
+          name:'',
+          songer:'',
+          pick:''
+        },
+        {
+          name:'',
+          songer:'',
+          pick:''
+        },
+        {
+          name:'',
+          songer:'',
+          pick:''
+        },
+        {
+          name:'',
+          songer:'',
+          pick:''
+        },
+        {
+          name:'',
+          songer:'',
+          pick:''
+        },
+        {
+          name:'',
+          songer:'',
+          pick:''
+        },
+        {
+          name:'',
+          songer:'',
+          pick:''
+        },
+      ],
       listMobule : [
         {
           title:'推荐歌单',
@@ -146,23 +191,22 @@ class Home extends Component {
 
   }
   render(){
-    const data= []
-    this.state.listMobule.forEach((value,index) =>{
-      return data.push(
-        <ListMobule key={index} List = {value} />
-      )
-    })
+
     return(
         <div>
           <Tabs defaultActiveKey="1">
-            <TabPane tab="个性推荐" key="1"><Personalized/></TabPane>
-            <TabPane tab="歌单" key="2">Content of Tab Pane 2</TabPane>
-            <TabPane tab="主播电台" key="3">Content of Tab Pane 3</TabPane>
-            <TabPane tab="排行榜" key="4">Content of Tab Pane 4</TabPane>
+            <TabPane tab="个性推荐" key="1">
+              <Personalized/>
+              <Recommend data={this.state.listMobule} />
+            </TabPane>
+            <TabPane tab="歌单" key="2"><Recommend data={this.state.listMobule} /></TabPane>
+            <TabPane tab="主播电台" key="3"><Recommend data={this.state.listMobule} /></TabPane>
+            <TabPane tab="排行榜" key="4">
+              <Tops tit='飙升榜' url="" tops={this.state.tops} />
+            </TabPane>
             <TabPane tab="歌手" key="5">Content of Tab Pane 5</TabPane>
-            <TabPane tab="最新音乐" key="6">Content of Tab Pane 6</TabPane>
+            <TabPane tab="最新音乐" key="6"><Recommend data={this.state.listMobule} /></TabPane>
           </Tabs>
-          {data}
         </div>
     )
   }

@@ -13,7 +13,7 @@ class Audio extends Component{
     }
   }
   componentDidMount(){
-    this.refs.myAudio.src = 'http://218.12.233.21/m10.music.126.net/20170509001336/5a375b6c08c89c4a32a854729876f255/ymusic/6517/af36/8fef/59653a7de4dfc7b2271701cfe317c614.mp3?wshc_tag=1&wsts_tag=59109399&wsid_tag=7b74f574&wsiphost=ipdbm';
+    this.refs.myAudio.src = 'http://47.93.47.183:8080/See+You+Again.mp3';
     this.props.play == true ? this.refs.myAudio.play() : this.refs.myAudio.pause()
     this.refs.myAudio.loop = true;
     this.refs.myAudio.preload = true;
