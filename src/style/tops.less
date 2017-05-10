@@ -1,21 +1,62 @@
+.tops-container{
+  width:100%;
+  height:auto;
+  overflow:hidden;
+  display:flex;
+  flex-wrap:wrap;
+  & > div{
+    width:310px;
+    height:auto;
+    overflow:hidden;
+    box-sizing: border-box;
+    padding:0 30px;
+  }
+}
 .tops{
-  width:330px;
+  width:250px;
   height:370px;
   overflow:hidden;
+  margin-bottom:50px;
   .tops-tit{
-    width:330px;
+    width:250px;
     height:90px;
     float:left;
-
   }
   .tops-list{
-    width:330px;
-    height:245px;
+    width:100%;
+    height:30px;
+    line-height:30px;
     overflow:hidden;
-    display:flex;
-    justify-content: space-between;
-    span:nth-child(3-n){
-      color:#f0f;
+    box-sizing: border-box;
+    padding-left:10px;
+    span{
+      dispaly:block;
+      float:left;
+      margin-right:7px;
     }
+    span:nth-child(3){
+      color:#898989;
+    }
+    span:nth-child(4){
+      float:right;
+    }
+  }
+  .tops-list:nth-child(-n+4){
+    color:#f00;
+
+  }
+  .tops-list:nth-child(odd){
+    background:#f5f5f7;
+  }
+  .tops-list:nth-child(even){
+    background:#ebeded;
+  }
+  .tops-more{
+    height:40px;
+    width:100%;
+    line-height:40px;
+    text-align: right;
+    color:#898989;
+    background:#f5f5f7;
   }
 }

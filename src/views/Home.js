@@ -3,6 +3,7 @@ import Personalized from  './../components/Personalized'
 import ListMobule from './../components/lists/ListMobule'
 import Recommend from './../components/Recommend'
 import Tops from './../components/tops/Tops'
+import MV from './../components/MV'
 import { Button,Icon,Tabs } from 'antd';
 const TabPane = Tabs.TabPane;
 
@@ -18,39 +19,39 @@ class Home extends Component {
           pick:'new'
         },
         {
-          name:'',
-          songer:'',
-          pick:''
+          name:'我害怕',
+          songer:'薛之谦',
+          pick:'new'
         },
         {
-          name:'',
-          songer:'',
-          pick:''
+          name:'刚好遇见你',
+          songer:'刚好遇见你',
+          pick:'-'
         },
         {
-          name:'',
-          songer:'',
-          pick:''
+          name:'我喜欢上你时的内心活动 ',
+          songer:'陈绮贞',
+          pick:'!'
         },
         {
-          name:'',
-          songer:'',
-          pick:''
+          name:'成都',
+          songer:'赵雷',
+          pick:'new'
         },
         {
-          name:'',
-          songer:'',
-          pick:''
+          name:'童话镇',
+          songer:'陈一发儿',
+          pick:'new'
         },
         {
-          name:'',
-          songer:'',
-          pick:''
+          name:'说散就散',
+          songer:'JIC',
+          pick:'new'
         },
         {
-          name:'',
-          songer:'',
-          pick:''
+          name:'Shape of you',
+          songer:'Ed Sheeran',
+          pick:'new'
         },
       ],
       listMobule : [
@@ -202,9 +203,15 @@ class Home extends Component {
             <TabPane tab="歌单" key="2"><Recommend data={this.state.listMobule} /></TabPane>
             <TabPane tab="主播电台" key="3"><Recommend data={this.state.listMobule} /></TabPane>
             <TabPane tab="排行榜" key="4">
-              <Tops tit='飙升榜' url="" tops={this.state.tops} />
+              <div className="tops-container">
+                <Tops tit='飙升榜' imgsrc="http://p3.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg?param=150y150" themeColor = "#839feb" url="" tops={this.state.tops} />
+                <Tops tit='热歌榜' imgsrc="http://p3.music.126.net/N2HO5xfYEqyQ8q6oxCw8IQ==/18713687906568048.jpg?param=150y150" themeColor = "#5cc1c7" url="" tops={this.state.tops} />
+                <Tops tit='新歌榜' imgsrc="http://p3.music.126.net/sBzD11nforcuh1jdLSgX7g==/18740076185638788.jpg?param=150y150" themeColor = "#cf5c7f" url="" tops={this.state.tops} />
+                <Tops tit='原创榜' imgsrc="http://p3.music.126.net/GhhuF6Ep5Tq9IEvLsyCN7w==/18708190348409091.jpg?param=150y150" themeColor = "#c57a5c" url="" tops={this.state.tops} />
+                <Tops tit='歌手榜' imgsrc="http://p4.music.126.net/vttjtRjL75Q4DEnjRsO8-A==/18752170813539664.jpg?param=150y150" themeColor = "#e2b750" url="" tops={this.state.tops} />
+              </div>
             </TabPane>
-            <TabPane tab="歌手" key="5">Content of Tab Pane 5</TabPane>
+            <TabPane tab="歌手" key="5"><MV id="12345" name="xiaowu" /></TabPane>
             <TabPane tab="最新音乐" key="6"><Recommend data={this.state.listMobule} /></TabPane>
           </Tabs>
         </div>

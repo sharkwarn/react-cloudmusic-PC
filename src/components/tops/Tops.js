@@ -14,23 +14,26 @@ class Tops extends Component{
     this.props.tops.forEach((value,index) =>{
       data.push(
       <div key={index} className="tops-list">
-        <span>{index}</span>
-        <span>{value.name}</span>
+        <span>{index + 1}</span>
         <span>{value.pick}</span>
+        <span>{value.name}</span>
         <span>{value.songer}</span>
       </div>
     )
     })
     return(
-      <div className='tops'>
-        <div className="tops-tit">{this.props.tit}</div>
-        {
-          data
-        }
-        <div className="tops-more">
-          查看全部>
+      <div>
+        <div className='tops'>
+          <div className="tops-tit" style={{background:`${this.props.themeColor}`}}><img width="90" height="90" src={this.props.imgsrc} /></div>
+          {
+            data
+          }
+          <div className="tops-more">
+            查看全部>
+          </div>
         </div>
       </div>
+
     )
   }
 }
